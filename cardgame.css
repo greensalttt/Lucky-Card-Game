@@ -1,0 +1,184 @@
+img {
+    width: 140px;
+    height: 170px;
+}
+
+.oneCard {
+    overflow: hidden;
+    padding: 10px;
+    width: 150px;
+    height: 170px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+}
+
+#board {
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+#allButton {
+    position: absolute;
+    left: 50%;
+    margin-top: 660px;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+button {
+    margin-top: 80px;
+    width: 90px;
+    height: 90px;
+}
+
+#really {
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+#result {
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 20px;
+}
+
+#scoreBoard {
+    position: absolute;
+    left: 48%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 40px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#modalB {
+    background-color: darkgreen;
+    color: gainsboro;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#playerAName,
+#playerBName {
+    width: 95%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* li 앞에 있는 점 없애기 */
+#rankingContainer .modalContent ul li::marker {
+    color: transparent;
+}
+
+#ranking {
+    margin-right: 35px;
+}
+
+select,
+input {
+    margin-bottom: 1px;
+}
+
+.blackPoint {
+    font-size: 18px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.redPoint {
+    font-size: 18px;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 768px) {
+
+    #allButton {
+        position: absolute;
+        margin-top: 410px;
+        text-align: center;
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .oneCard {
+        transform: translateX(-13%);
+        width: 50px;
+        height: 90px;
+    }
+
+    img {
+        width: 50px;
+        height: 90px;
+    }
+
+    #really {
+        margin-left: 0;
+        text-align: center;
+    }
+}

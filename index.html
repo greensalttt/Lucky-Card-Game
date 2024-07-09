@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cardgame.css" />
+</head>
+
+<body>
+
+    <div id="modalAll" class="modal">
+        <div class="modalContent">
+            <label>Name</label>
+            <input type="text" id="playerAName" placeholder="Black 플레이어 이름"><br>
+            <input type="text" id="playerBName" placeholder="Red 플레이어 이름"><br><br>
+            <label>점수 선택</label>
+            <select id="scoreSelect">
+                <option value="1">단판 내기</option>
+                <option value="3">3점 내기</option>
+                <option value="5">5점 내기</option>
+                <option value="10">10점 내기</option>
+            </select>
+            <button id="modalB" onclick="startGame()">게임 시작</button>
+        </div>
+    </div>
+
+    <div id="rankingContainer" class="modal">
+        <div class="modalContent">
+            <span class="close" onclick="closeRankingModal()">&times;</span>
+            <h2>Lucky People!</h2>
+            <ul id="ranking"></ul>
+        </div>
+    </div>
+
+    <div id="allButton">
+        <div id="scoreBoard"></div><br>
+        <button onclick="blackBack()">블랙 오픈</button>
+        <button onclick="redBack()">레드 오픈</button>
+        <button onclick="cardShuffle()">다음 턴</button>
+        <button onclick="reset()">설정 변경</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="board">
+        <ul>
+            <h4><a id="really">간단한 내기용</a></h4><br><br><br>
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li><br>
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li class="oneCard">
+                <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="oneCard">
+                <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="oneCard">
+                <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li><br>
+
+            <li class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+            <li class="oneCard">
+                <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="oneCard">
+                <a href="#"><img src="" alt=""></a>
+            </li>
+            <li class="oneCard">
+                <a href="#"><img src="" alt=""></a>
+            </li>
+            <li onclick="clearRanking()" class="oneCard">
+                <a href="#">
+                    <img src="" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script src="./cardgame.js"></script>
+</body>
+
+</html>
