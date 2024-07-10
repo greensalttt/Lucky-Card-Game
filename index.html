@@ -25,11 +25,12 @@
         </div>
     </div>
 
-    <div id="rankingContainer" class="modal">
+    <div id="recordContainer" class="modal">
         <div class="modalContent">
-            <span class="close" onclick="closeRankingModal()">&times;</span>
+            <span class="close" onclick="closeRecordModal()">&times;</span>
             <h2>Lucky People!</h2>
-            <ul id="ranking"></ul>
+            <ul id="record"></ul>
+            <button class="reset" onclick="clearRecord()">기록 초기화</button>
         </div>
     </div>
 
@@ -38,7 +39,7 @@
         <button onclick="blackBack()">블랙 오픈</button>
         <button onclick="redBack()">레드 오픈</button>
         <button onclick="cardShuffle()">다음 턴</button>
-        <button onclick="reset()">설정 변경</button>
+        <button onclick="reset()">다시 시작</button>
         <div id="result"></div>
     </div>
 
@@ -108,7 +109,7 @@
             <li class="oneCard">
                 <a href="#"><img src="" alt=""></a>
             </li>
-            <li onclick="clearRanking()" class="oneCard">
+            <li class="oneCard">
                 <a href="#">
                     <img src="" alt="">
                 </a>

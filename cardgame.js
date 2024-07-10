@@ -12,8 +12,8 @@ let redScore = 0;
 let gameStarted = false;
 let targetScore = 1;
 
-function closeRankingModal() {
-    document.getElementById('rankingContainer').style.display = 'none';
+function closeRecordModal() {
+    document.getElementById('recordContainer').style.display = 'none';
 }
 
 function startGame() {
@@ -197,21 +197,21 @@ function saveWinnerToLocalStorage(winner, playerA, playerB) {
     localStorage.setItem('winners', JSON.stringify(winners));
 }
 
-function displayRanking() {
+function displayRecord() {
     // 저장된 승자 정보 가져오기
     let winners = JSON.parse(localStorage.getItem('winners')) || [];
 
     // 랭킹판 요소 찾기
-    let rankingElement = document.getElementById('ranking');
+    let RecordElement = document.getElementById('record');
 
     // 랭킹판 초기화
-    rankingElement.innerHTML = '';
+    RecordElement.innerHTML = '';
 
     // 승자 정보를 랭킹판에 추가
     winners.forEach(function (record, index) {
         let listItem = document.createElement('li');
         listItem.textContent = `${index + 1}. ${record.winner} (${record.playerA} vs ${record.playerB})`;
-        rankingElement.appendChild(listItem);
+        RecordElement.appendChild(listItem);
     });
 }
 // 게임 종료 시 승자를 저장하고 랭킹판을 업데이트
@@ -220,12 +220,12 @@ function endGame(winner) {
     saveWinnerToLocalStorage(winner, playerAName, playerBName);
 
     // 랭킹판 업데이트
-    displayRanking();
-    document.getElementById('rankingContainer').style.display = 'block';
+    displayRecord();
+    document.getElementById('recordContainer').style.display = 'block';
 }
 
 // 랭킹 초기화
-function clearRanking() {
+function clearRecord() {
     localStorage.removeItem('winners');
-    displayRanking(); // 랭킹판 업데이트
+    displayRecord(); // 랭킹판 업데이트
 }
