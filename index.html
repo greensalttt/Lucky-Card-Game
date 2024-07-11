@@ -12,8 +12,8 @@
     <div id="modalAll" class="modal">
         <div class="modalContent">
             <label>Name</label>
-            <input type="text" id="playerAName" placeholder="Black 플레이어 이름"><br>
-            <input type="text" id="playerBName" placeholder="Red 플레이어 이름"><br><br>
+            <input type="text" id="playerAName" placeholder="Blue 플레이어 이름 (Black Card)"><br>
+            <input type="text" id="playerBName" placeholder="Green 플레이어 이름 (Red Card)"><br><br>
             <label>점수 선택</label>
             <select id="scoreSelect">
                 <option value="1">단판 내기</option>
@@ -35,9 +35,10 @@
     </div>
 
     <div id="allButton">
-        <div id="scoreBoard"></div><br>
-        <button onclick="blackBack()">블랙 오픈</button>
-        <button onclick="redBack()">레드 오픈</button>
+        <div id="scoreBoard"></div>
+        <div id="scoreBoard2"></div><br>
+        <button onclick="blackBack()">블루 오픈</button>
+        <button onclick="redBack()">그린 오픈</button>
         <button onclick="cardShuffle()">다음 턴</button>
         <button onclick="reset()">다시 시작</button>
         <div id="result"></div>

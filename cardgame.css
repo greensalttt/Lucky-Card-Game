@@ -55,11 +55,22 @@ button {
 
 #scoreBoard {
     position: absolute;
-    left: 48%;
-    transform: translateX(-50%);
-    text-align: center;
+    right: 100%;
     white-space: nowrap;
     margin-top: 40px;
+    font-size: 18px;
+    color: darkblue;
+    /* font-weight: 600; */
+}
+
+#scoreBoard2 {
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+    margin-top: 40px;
+    font-size: 18px;
+    color: darkgreen;
+    /* font-weight: 600; */
 }
 
 .modal {
@@ -152,13 +163,13 @@ input {
 
 .blackPoint {
     font-size: 18px;
-    color: black;
+    color: darkblue;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .redPoint {
     font-size: 18px;
-    color: red;
+    color: darkgreen;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 

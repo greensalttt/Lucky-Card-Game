@@ -1,6 +1,8 @@
 const oneCardTong = document.getElementsByClassName("oneCard");
 const resultElement = document.getElementById('result');
 const scoreBoardElement = document.getElementById('scoreBoard');
+const scoreBoardElement2 = document.getElementById('scoreBoard2');
+
 var modal = document.getElementById('modalAll');
 let cardArr = []
 let middle = [];
@@ -145,17 +147,18 @@ function checkScore() {
 function updateResult() {
     if (blackCardCount + redCardCount === oneCardTong.length) {
         if (blackCardCount > redCardCount) {
-            resultElement.textContent = `BLACK POINT! (블랙: ${blackCardCount}, 레드: ${redCardCount})`;
+            resultElement.textContent = `BLUE POINT! (블루: ${blackCardCount}, 그린: ${redCardCount})`;
             resultElement.classList.add('blackPoint');
             blackScore++;
         } else if (blackCardCount < redCardCount) {
-            resultElement.textContent = `RED POINT! (블랙: ${blackCardCount}, 레드: ${redCardCount})`;
+            resultElement.textContent = `GREED POINT! (블루: ${blackCardCount}, 그린: ${redCardCount})`;
             resultElement.classList.add('redPoint');
             redScore++;
         } else {
-            resultElement.textContent = `DRAW! (블랙: ${blackCardCount}, 레드: ${redCardCount})`;
+            resultElement.textContent = `DRAW! (블루: ${blackCardCount}, 그린: ${redCardCount})`;
         }
-        scoreBoardElement.textContent = `점수: ${playerAName} ${blackScore}, ${playerBName} ${redScore}`;
+        scoreBoardElement.textContent = `${playerAName}: ${blackScore}`;
+        scoreBoardElement2.textContent = `${playerBName}: ${redScore}`;
 
         // 설정한 목표 점수에 도달했을때 점수가 업데이트 되지 않고 게임이 종료되는 현상
         // checkScore();
@@ -181,7 +184,8 @@ function reset() {
     redCardCount = 0;
     blackScore = 0;
     redScore = 0;
-    scoreBoardElement.textContent = `점수: ${playerAName} ${blackScore}, ${playerBName} ${redScore}`;
+    scoreBoardElement.textContent = `${playerAName}: ${blackScore}`;
+    scoreBoardElement2.textContent = `${playerBName}: ${redScore}`;
     resultElement.textContent = '';
     modal.style.display = 'block';
 }
