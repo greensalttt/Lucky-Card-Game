@@ -147,15 +147,15 @@ function checkScore() {
 function updateResult() {
     if (blackCardCount + redCardCount === oneCardTong.length) {
         if (blackCardCount > redCardCount) {
-            resultElement.textContent = `BLUE POINT! (블루: ${blackCardCount}, 그린: ${redCardCount})`;
+            resultElement.textContent = `BLACK POINT! (블랙: ${blackCardCount}, 레드: ${redCardCount})`;
             resultElement.classList.add('blackPoint');
             blackScore++;
         } else if (blackCardCount < redCardCount) {
-            resultElement.textContent = `GREED POINT! (블루: ${blackCardCount}, 그린: ${redCardCount})`;
+            resultElement.textContent = `RED POINT! (블랙: ${blackCardCount}, 레드: ${redCardCount})`;
             resultElement.classList.add('redPoint');
             redScore++;
         } else {
-            resultElement.textContent = `DRAW! (블루: ${blackCardCount}, 그린: ${redCardCount})`;
+            resultElement.textContent = `DRAW! (블랙: ${blackCardCount}, 레드: ${redCardCount})`;
         }
         scoreBoardElement.textContent = `${playerAName}: ${blackScore}`;
         scoreBoardElement2.textContent = `${playerBName}: ${redScore}`;
