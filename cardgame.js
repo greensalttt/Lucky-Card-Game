@@ -2,6 +2,8 @@ const oneCardTong = document.getElementsByClassName("oneCard");
 const resultElement = document.getElementById('result');
 const scoreBoardElement = document.getElementById('scoreBoard');
 const scoreBoardElement2 = document.getElementById('scoreBoard2');
+const blackBtn = document.getElementById('blackBtn');
+const redBtn = document.getElementById('redBtn');
 
 var modal = document.getElementById('modalAll');
 let cardArr = []
@@ -79,6 +81,8 @@ function cardShuffle() {
     }
     allBack();
     updateResult();
+    document.getElementById("blackBtn").disabled = false;
+    document.getElementById("redBtn").disabled = false;
 }
 
 // 모든 카드가 뒷면으로 (초기화 함수에 참조)
@@ -112,6 +116,8 @@ function blackBack() {
         }
     }
     updateResult();
+    // 중복 클릭 안되도록 버튼 비활성화
+    document.getElementById("blackBtn").disabled = true;
 
 }
 
@@ -131,6 +137,8 @@ function redBack() {
         }
     }
     updateResult();
+    // 중복 클릭 안되도록 버튼 비활성화
+    document.getElementById("redBtn").disabled = true;
 }
 
 // 점수 도달시 게임 종료
