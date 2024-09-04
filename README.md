@@ -1,5 +1,32 @@
 ![럭키 카드게임](https://github.com/user-attachments/assets/385dd7f8-93ea-4057-9fe9-5ddaa9ca3941)
 
+## 개발환경
+
+> JavaScript + CSS + HTML
+
+```yaml
+VCS: github
+IDE: Visual Studio Code
+```
+<br>
+
+
+## Commit Message Convention
+
+```
+feat: 새로운 기능 추가
+fix: 버그 수정
+test: 테스트 코드
+remove: 파일 삭제
+docs: README 변경
+style: 코드 스타일 변경
+comment: 주석 추가 및 변경
+chore: 빌드 업데이트 및 자잘한 수정
+refactor: 코드 구조 개선 (기능 변경 X)
+```
+
+<br>
+
 ## 게임 소개
 - 랜덤으로 뽑힌 카드중 선택한 색상의 카드가 더 많은 플레이어가 점수를 갖는 게임
 - 사다리 타기와 같이 운에 의해 결정되는 게임을 모티브로 삼아, 친구와 함께 간단하게 즐길 수 있는 게임을 목표로 개발했습니다.
