@@ -7,6 +7,7 @@
 ```yaml
 VCS: github
 IDE: Visual Studio Code
+Deployment: GitHub Pages
 ```
 <br>
 
